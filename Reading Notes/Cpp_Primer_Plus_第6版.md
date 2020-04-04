@@ -7,7 +7,7 @@
 - 3.4.4 列表初始化{}中，严格来讲变量类型不是必须匹配，而是不能<font color=#ff0000><b>缩窄（narrowing）</b></font>。🏰
 
 - 4.3.5 C++11新增<font color=#ff0000><b>原始字符串</b></font>字面值（Raw string literal）：
-R "delimiter( raw_characters )delimiter"，括号内的转义字符将被忽略；当希望输出括号”()”时，原始字符串必须以R"+*(开头，以)+*"结尾；🐆
+R "delimiter( raw_characters )delimiter"，括号内的转义字符将被忽略；当希望输出括号”()”时，原始字符串必须以R"+\*(开头，以)+\*"结尾；🐆
 
 - 4.7.5 尝试释放已经释放的内存结果是不确定的，但对空指针使用<font color=#569CD6><b>delete</b></font>是安全的。🍇
 
