@@ -14,3 +14,4 @@
   - [Cpp Primer Plus  第6版](./Reading%20Notes/Cpp_Primer_Plus_第6版.md)
   - [CppCoreGuidelines](./Reading%20Notes/CppCoreGuidelines.md)
   - [Qt 5.9 C++开发指南](./Reading%20Notes/Qt_5.9_C++开发指南.md)
+  - [Learning Python 5th Edition](./Reading%20Notes/Learning_Python_5th_Edition.md)
