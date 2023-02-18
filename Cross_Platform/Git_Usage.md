@@ -28,6 +28,10 @@
 
         git config --global http.sslVerify "false"
 
+- **推送失败的回滚**
+    
+    无法推送远程仓库，因为本地分支在远程分支的后面
+    https://blog.csdn.net/imxiezy/article/details/124506162
 
 - **to do**
 
