@@ -51,3 +51,4 @@ PS C:\Users> wsl -l -v
 * Ubuntu    Running         2
 ```
 就可以正常使用了，从开始菜单点击发行版图标或安装一个Windows新开发的终端都可以启动系统。这里推荐使用[MobaXterm](https://mobaxterm.mobatek.net/)这个软件和Linux进行交互。
+![MobaXterm](./img/MobaXterm.png)
