@@ -50,5 +50,7 @@ PS C:\Users> wsl -l -v
   NAME      STATE           VERSION
 * Ubuntu    Running         2
 ```
-就可以正常使用了，从开始菜单点击发行版图标或安装一个Windows新开发的终端都可以启动系统。这里推荐使用[MobaXterm](https://mobaxterm.mobatek.net/)这个软件和Linux进行交互。
+就可以正常使用了，可能还需要安装一些库和编译环境，以VC++跨平台开发为例，可以参考[设置适用于跨平台 C++ 开发的 Linux 计算机](https://learn.microsoft.com/zh-cn/cpp/build/get-started-linux-cmake?view=msvc-170#prerequisites)，这就不属于WSL的范畴了，可以查阅Linux相关文档。
+
+从开始菜单点击发行版图标或安装一个[Windows终端](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=zh-cn&gl=cn&rtc=1)都可以打开Linux。这里推荐使用[MobaXterm](https://mobaxterm.mobatek.net/)这个软件和Linux进行交互。
 ![MobaXterm](./img/MobaXterm.png)
