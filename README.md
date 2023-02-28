@@ -22,5 +22,6 @@
 
 - **Cross Platform** 🔨
   - [Git Usage](./Cross_Platform/Git_Usage.md)
+  - [Shell Usage](./Cross_Platform/Shell.md)
   - [Install WSL](./Cross_Platform/WSL.md)
   - [CMake](./Cross_Platform/CMake.md)
