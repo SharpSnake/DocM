@@ -82,7 +82,7 @@ PS C:\Users> wsl -l -v
   ``` shell
   sudo nano /etc/ssh/sshd_config
   ```
-  ![](./img/wsl_sshd_config.png)
+  ![](./img/wsl_sshd_config.png)  
   添加如上配置，按下Ctrl + X，按Y键确认保存，再按Enter键退出。
   最后运行：
   ``` shell
