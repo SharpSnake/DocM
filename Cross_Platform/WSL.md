@@ -1,4 +1,13 @@
-# Install WSL
+
+# Windows Subsystem for Linux(WSL)
+
+- [Install WSL](#install-wsl)
+- [Enjoy WSL✌️](#enjoy-wsl️)
+- [Connect to Visual Studio](#connect-to-visual-studio)
+- [Development Tricks](#development-tricks)
+
+
+## Install WSL
 
 安装步骤按照官方指引[使用 WSL 在 Windows 上安装 Linux](https://learn.microsoft.com/zh-cn/windows/wsl/install)即可。旧版Windows（所谓旧版我猜测是相对Win11的Win10，或Win10较旧的版本号）应参照[旧版 WSL 的手动安装步骤](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)。我的系统是Win10 19044版本，实际上基本是参考旧版安装指引来的。
 
@@ -43,14 +52,67 @@
         - 在首选DNS服务器中输入：4.2.2.1
         - 在备用DNS服务器中输入：4.2.2.2
 
-# Enjoy WSL✌️
+## Enjoy WSL✌️
 一切就绪后，再次使用命令`wsl -l -v`查看已安装的Linux发行版：
 ``` cmd
 PS C:\Users> wsl -l -v
   NAME      STATE           VERSION
 * Ubuntu    Running         2
 ```
-就可以正常使用了，可能还需要安装一些库和编译环境，以VC++跨平台开发为例，可以参考[设置适用于跨平台 C++ 开发的 Linux 计算机](https://learn.microsoft.com/zh-cn/cpp/build/get-started-linux-cmake?view=msvc-170#prerequisites)，这就不属于WSL的范畴了，可以查阅Linux相关文档。
+就可以正常使用了，可能还需要安装一些库和编译环境，以VC++跨平台开发为例，可以参考[设置适用于跨平台 C++ 开发的 Linux 计算机](https://learn.microsoft.com/zh-cn/cpp/build/get-started-linux-cmake?view=msvc-170#prerequisites)。
 
 从开始菜单点击发行版图标或安装一个[Windows终端](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=zh-cn&gl=cn&rtc=1)都可以打开Linux。这里推荐使用[MobaXterm](https://mobaxterm.mobatek.net/)这个软件和Linux进行交互。
 ![MobaXterm](./img/MobaXterm.png)
+
+
+## Connect to Visual Studio
+
+官方文档：[在 Visual Studio 中连接到你的目标 Linux 系统](https://learn.microsoft.com/zh-cn/cpp/linux/connect-to-your-remote-linux-computer?view=msvc-170) ，这一过程可能会遇到一些问题：
+
+- **启动SSH服务器**  
+  在VS连接管理器中主机名、端口、用户名和密码都填好了，linux终端也启动了，但还是连接失败。是因为WSL下linux不会自动启动ssh服务（`sudo systemctl enable ssh`不起作用），需要每次启动linux时手动启动：
+  ``` shell
+  sudo apt install openssh-server（如果已安装，无需运行此行）
+  sudo service ssh start
+  ```
+
+- **设置端口**  
+  ![](./img/vs_connect_wsl.png)
+  主机名默认是localhost，端口默认是22，用户名和密码是linux初次使用时设置好的。修改端口的方法：
+  ``` shell
+  sudo nano /etc/ssh/sshd_config
+  ```
+  ![](./img/wsl_sshd_config.png)
+  添加如上配置，按下Ctrl + X，按Y键确认保存，再按Enter键退出。
+  最后运行：
+  ``` shell
+  sudo service ssh restart
+  ```
+  新的端口生效。
+
+## Development Tricks
+
+- **访问Github**  
+  在linux中访问Github会遇到：Failed to connect to xxx.com port 443，解决方法是使用[GitHub520](https://github.com/521xueweihan/GitHub520)这个库（备用链接：[Gitee镜像](https://gitee.com/meteora/GitHub520)），通过修改hosts重定向github网址（Windows下推荐使用Watt Toolkit）。  
+  运行`sudo nano /etc/hosts`在末尾添加最新的hosts列表并保存，重启系统。
+
+- **使用CMake**  
+  使用CMake如果遇到：Could not find OpenSSL.  Install an OpenSSL development package or configure CMake with -DCMAKE_USE_OPENSSL=OFF to build without OpenSSL.  
+  有两种解决方法：  
+  - 安装OpenSSL：`sudo apt-get install libssl-dev`
+  - 在项目顶层CMakeLists.txt文件的开头加入`set(CMAKE_USE_OPENSSL OFF)`
+
+- **配置vcpkg**  
+  vcpkg安装后把头文件、库目录加到gcc的搜索路径中，类似于Windows的环境变量。  
+  运行：`sudo nano ~/.bashrc`（也有说其他文件的，经过测试只有这个有效），在文件末尾添加：
+  ``` shell
+  export VCPKG_ROOT=/path/to/vcpkg
+  export LIBRARY_PATH=$LIBRARY_PATH:$VCPKG_ROOT/installed/x64-linux/lib
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$VCPKG_ROOT/installed/x64-linux/lib
+  export C_INCLUDE_PATH=$C_INCLUDE_PATH:$VCPKG_ROOT/installed/x64-linux/include
+  export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$VCPKG_ROOT/installed/x64-linux/include
+  ```
+  运行`source ~/.bashrc`或重启终端后将永久生效（如果仅在终端中运行上述命令，下次启动新的终端会失效）。  
+  查看gcc的状态：`echo | g++ -v -x c++ -E -`
+  ![](./img/vcpkg_export.png)
+
