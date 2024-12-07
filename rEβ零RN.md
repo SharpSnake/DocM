@@ -1,3 +1,6 @@
+## 2024.09.26
+- Doxygen修改INPUT_ENCODING为GBK（或GB18030）才能支持中文
+
 ## 2024.09.10
 - boost_locale可选择icu进行编码转换
 - wchar_t不是定宽的，windows下是16位，linux下是32位
