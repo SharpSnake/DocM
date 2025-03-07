@@ -8,7 +8,7 @@
 ## Tools And Extensions
 
 - **Markdown All in One( VSCode )**
-  - 辅助编辑：例如资源名自动补全、字体加粗快捷键、链接自动粘贴等等
+  - 辅助编辑：例如资源名[自动补全](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#auto-completions)、字体加粗[快捷键](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#keyboard-shortcuts-1)、链接自动粘贴等等
   - 制作目录：通过命令面板（`Ctrl+Shift+P`）执行`Create Table of Contents`命令，则根据文章所有标题自动生成目录，并自动更新
   ![](./img/MD_CreateTOC.png)
   可以更改用于生成目录的标题级别：
@@ -20,6 +20,18 @@
     1. 快速导出：  
     ![](./img/MD_ExportPDF.png)
     2. 自定义：如需修改页面布局或纸张，可以选择`Open in Browser`，然后再使用浏览器的打印功能导出为PDF
+
+- **Markdown Table( VSCode )**  
+  辅助编辑表格，有以下功能：
+  - **插入列**：右键菜单`Markdown Table:Insert column in the right/left`
+  - **移动列**：右键菜单`Markdown Table:Move to Right/left`
+  - **Tab键**：快速定位到下一个单元格，如果在行末则插入新的一行  
+  ![](./img/MD_TableTab.gif)
+  - **对齐方式**：右键菜单`Markdown Table:Align to Left/Center/Right`
+  - **拷贝表格**：
+    - 先将Excel或CSV表格以文本形式粘贴
+    - 选中粘贴好的文本右键菜单`Markdown Table:Convert TSV/CSV to table`
+  - **格式化**：右键菜单`Markdown Table:Format all tables`，对齐表格文本，但对最终显示没有影响
 
 - **[StackEdit](https://stackedit.io/app#)**
   一款在线Markdown编辑器，优点是有toolbar，需要注意的是，粘贴文本时，一定要在浏览器右键菜单中选择`粘贴为纯文本`，否则已有格式可能出错
