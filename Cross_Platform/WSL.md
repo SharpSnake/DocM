@@ -116,3 +116,4 @@ PS C:\Users> wsl -l -v
   查看gcc的状态：`echo | g++ -v -x c++ -E -`
   ![](./img/vcpkg_export.png)
 
+更多使用方法参考[Awesome Linux](./Linux.md)
