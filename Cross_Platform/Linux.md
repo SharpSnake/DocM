@@ -1,7 +1,10 @@
 # Awesome Linux
 
 - [Commands Cheat Sheet](#commands-cheat-sheet)
-- [Basic Tricks](#basic-tricks)
+- [Tips and Tricks](#tips-and-tricks)
+  - [Terminal](#terminal)
+  - [File Manager](#file-manager)
+  - [Network](#network)
 
 
 ## Commands Cheat Sheet
@@ -66,4 +69,31 @@
 2. **运行结果** 因实际环境不同可能有所差异，部分命令未填充具体结果。  
 
 
-## Basic Tricks
+## Tips and Tricks
+
+### Terminal
+- **修改主机名（hostname）**  
+  ```
+  sudo hostnamectl set-hostname newname
+  ```
+  重启会话后生效（但重启WSL后会复原）：  
+  ![](./img/linux/set_hostname.png)
+
+- To be continued
+
+
+### File Manager
+- **Permissions**
+  1. a
+  2. b
+
+- To be continued
+
+
+### Network
+- **访问Github**  
+  在linux中访问Github会遇到：Failed to connect to xxx.com port 443，解决方法是使用[GitHub520](https://github.com/521xueweihan/GitHub520)这个库（备用链接：[Gitee镜像](https://gitee.com/meteora/GitHub520)），通过修改hosts重定向github网址（Windows下推荐使用Watt Toolkit）。 
+  1.  运行`sudo nano /etc/hosts`在末尾添加最新的[hosts列表](https://github.com/521xueweihan/GitHub520?tab=readme-ov-file#211-%E5%A4%8D%E5%88%B6%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%86%85%E5%AE%B9)  
+  ![](./img/linux/GitHub520_1.png)
+  1.  保存（`Ctrl+O，Enter`）并退出编辑（`Ctrl+X`），重启会话后就可以正常访问Github  
+  ![](./img/linux/GitHub520_2.png)

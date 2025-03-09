@@ -92,10 +92,6 @@ PS C:\Users> wsl -l -v
 
 ## Development Tricks
 
-- **访问Github**  
-  在linux中访问Github会遇到：Failed to connect to xxx.com port 443，解决方法是使用[GitHub520](https://github.com/521xueweihan/GitHub520)这个库（备用链接：[Gitee镜像](https://gitee.com/meteora/GitHub520)），通过修改hosts重定向github网址（Windows下推荐使用Watt Toolkit）。  
-  运行`sudo nano /etc/hosts`在末尾添加最新的hosts列表并保存（`Ctrl+O，Enter，最后Ctrl+X退出`），重启系统。
-
 - **使用CMake**  
   使用CMake如果遇到：Could not find OpenSSL.  Install an OpenSSL development package or configure CMake with -DCMAKE_USE_OPENSSL=OFF to build without OpenSSL.  
   有两种解决方法：  
