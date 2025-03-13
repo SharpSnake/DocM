@@ -13,8 +13,14 @@
 ## Tools And Extensions
 
 ### Visual Studio Code
-- a
-- b
+- **路径补全：转到标题**
+  1. 链接路径开头输入一个`#`，列出当前文档的相应标题  
+  ![](https://code.visualstudio.com/assets/docs/languages/Markdown/path-completions-header.png)
+  2. 链接路径开头输入两个`#`，列出当前工作区所有文档的相应标题  
+  ![](https://code.visualstudio.com/assets/docs/languages/Markdown/md-workspace-header-suggestion.png)
+- **标题引用、重命名**：按`Shift + Alt + F12`查看所有引用当前标题的位置；按`F2`重命名标题，并更新所有引用此标题的地方
+
+更多内容详见：[Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
 
 
 ### Markdown All in One( VSCode )
