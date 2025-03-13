@@ -6,7 +6,12 @@
   - [Markdown Preview Enhanced( VSCode )](#markdown-preview-enhanced-vscode-)
   - [Markdown Table( VSCode )](#markdown-table-vscode-)
   - [StackEdit](#stackedit)
-- [Basic Syntax](#basic-syntax)
+- [Advanced Syntax](#advanced-syntax)
+  - [任务列表](#任务列表)
+  - [高亮](#高亮)
+  - [对齐](#对齐)
+  - [脚注](#脚注)
+  - [图表（Mermaid）](#图表mermaid)
 
 
 
@@ -57,4 +62,24 @@
 一款在线Markdown编辑器，优点是有toolbar，需要注意的是，粘贴文本时，一定要在浏览器右键菜单中选择`粘贴为纯文本`，否则已有格式可能出错
 
 
-## Basic Syntax
+## Advanced Syntax
+
+### 任务列表
+- [x] Task already done
+- [ ] Task to do
+
+💡：使用快捷键`Alt + C`切换状态
+
+### 高亮
+1. Highlight these ==very important words==
+2. Highlight these <mark>very important words</mark>.
+
+💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
+
+### 对齐
+
+
+### 脚注
+
+
+### 图表（Mermaid）
