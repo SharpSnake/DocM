@@ -11,6 +11,7 @@
   - [高亮](#高亮)
   - [对齐](#对齐)
   - [脚注](#脚注)
+  - [上下标](#上下标)
   - [图表（Mermaid）](#图表mermaid)
   - [数学公式](#数学公式)
 
@@ -97,6 +98,26 @@ Highlight these <mark>important words</mark>
 
 ### 脚注
 
+John Wick's[^1] nickname is Baba Yaga[^yaga].
+
+[^1]: John Wick is a former hitman grieving the loss of his true love.
+[^yaga]: An enigmatic character from Slavic folklore who fries and eats children.
+
+![](./img/MD_Footnotes.png)
+💡：标识符可以是数字或单词，实际渲染会按顺序转换为编号，脚注本身一般也会自动置于文档末尾
+
+### 上下标
+- 下标：H<sub>2</sub>O
+  ```html
+  H~2~O
+  H<sub>2</sub>O
+  ```
+- 上标：X<sup>2</sup>
+  ```html
+  X^2^
+  X<sup>2</sup>
+  ```
+💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
 
 ### 图表（Mermaid）
 
