@@ -12,6 +12,7 @@
   - [对齐](#对齐)
   - [脚注](#脚注)
   - [图表（Mermaid）](#图表mermaid)
+  - [数学公式](#数学公式)
 
 
 
@@ -68,18 +69,36 @@
 - [x] Task already done
 - [ ] Task to do
 
+```
+- [x] Task already done
+- [ ] Task to do
+```
 💡：使用快捷键`Alt + C`切换状态
 
 ### 高亮
-1. Highlight these ==very important words==
-2. Highlight these <mark>very important words</mark>.
+Highlight these <mark>important words</mark>
 
+```
+Highlight these ==important words==
+Highlight these <mark>important words</mark>
+```
 💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
 
 ### 对齐
+<p align="left">左对齐</p>
+<center>居中</center>
+<p align="right">右对齐</p>
 
+```html
+<p align="left">左对齐</p>
+<p align="center">居中</p> 或 <center>居中</center>
+<p align="right">右对齐</p>
+```
 
 ### 脚注
 
 
 ### 图表（Mermaid）
+
+
+### 数学公式
