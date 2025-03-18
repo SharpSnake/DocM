@@ -86,12 +86,12 @@ Highlight these <mark>important words</mark>
 
 ### 对齐
 <p align="left">左对齐</p>
-<center>居中</center>
+<p align="center">居中</p>
 <p align="right">右对齐</p>
 
 ```html
 <p align="left">左对齐</p>
-<p align="center">居中</p> 或 <center>居中</center>
+<p align="center">居中</p>
 <p align="right">右对齐</p>
 ```
 
