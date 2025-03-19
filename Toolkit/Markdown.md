@@ -12,6 +12,7 @@
   - [对齐](#对齐)
   - [脚注](#脚注)
   - [上下标](#上下标)
+  - [图片布局](#图片布局)
   - [图表（Mermaid）](#图表mermaid)
   - [数学公式](#数学公式)
 
@@ -118,6 +119,36 @@ John Wick's[^1] nickname is Baba Yaga[^yaga].
   X<sup>2</sup>
   ```
 💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
+
+### 图片布局
+- **水平铺放**
+  <p>
+    <img src="https://picsum.photos/100/100" hspace="0" >
+    <img src="https://picsum.photos/100/100" hspace="10" >
+  </p>
+
+  ```html
+  <p>
+    <img src="https://picsum.photos/100/100" hspace="0" >
+    <img src="https://picsum.photos/100/100" hspace="10" >
+  </p>
+  ```
+  💡：hspace表示图片左侧和右侧的空白
+
+- **垂直铺放**
+  <p>
+    <img src="https://picsum.photos/300/100" >
+    <p>
+    <img src="https://picsum.photos/300/100" >
+  </p>
+
+  ```html
+  <p>
+    <img src="https://picsum.photos/300/100" >
+    <p>
+    <img src="https://picsum.photos/300/100" >
+  </p>
+  ```
 
 ### 图表（Mermaid）
 
