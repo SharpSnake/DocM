@@ -7,12 +7,15 @@
   - [Markdown Table( VSCode )](#markdown-table-vscode-)
   - [StackEdit](#stackedit)
 - [Advanced Syntax](#advanced-syntax)
+  - [高级文本](#高级文本)
+    - [高亮](#高亮)
+    - [下划线](#下划线)
+    - [上下标](#上下标)
   - [任务列表](#任务列表)
-  - [高亮](#高亮)
   - [对齐](#对齐)
   - [脚注](#脚注)
-  - [上下标](#上下标)
   - [图片布局](#图片布局)
+  - [折叠](#折叠)
   - [图表（Mermaid）](#图表mermaid)
   - [数学公式](#数学公式)
 
@@ -67,47 +70,26 @@
 
 ## Advanced Syntax
 
-### 任务列表
-- [x] Task already done
-- [ ] Task to do
+---
+### 高级文本
 
-```
-- [x] Task already done
-- [ ] Task to do
-```
-💡：使用快捷键`Alt + C`切换状态
-
-### 高亮
+#### 高亮
 Highlight these <mark>important words</mark>
 
-```
+```html
 Highlight these ==important words==
 Highlight these <mark>important words</mark>
 ```
 💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
 
-### 对齐
-<p align="left">左对齐</p>
-<p align="center">居中</p>
-<p align="right">右对齐</p>
-
+#### 下划线
+姓名：<ins>John Wick</ins>
+职业：<ins>Assassin</ins>
 ```html
-<p align="left">左对齐</p>
-<p align="center">居中</p>
-<p align="right">右对齐</p>
+<ins>underline text</ins>
 ```
 
-### 脚注
-
-John Wick's[^1] nickname is Baba Yaga[^yaga].
-
-[^1]: John Wick is a former hitman grieving the loss of his true love.
-[^yaga]: An enigmatic character from Slavic folklore who fries and eats children.
-
-![](./img/MD_Footnotes.png)
-💡：标识符可以是数字或单词，实际渲染会按顺序转换为编号，脚注本身一般也会自动置于文档末尾
-
-### 上下标
+#### 上下标
 - 下标：H<sub>2</sub>O
   ```html
   H~2~O
@@ -120,6 +102,41 @@ John Wick's[^1] nickname is Baba Yaga[^yaga].
   ```
 💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
 
+---
+### 任务列表
+- [x] Task already done
+- [ ] Task to do
+
+```
+- [x] Task already done
+- [ ] Task to do
+```
+💡：使用快捷键`Alt + C`切换状态
+
+---
+### 对齐
+<p align="left">左对齐</p>
+<p align="center">居中</p>
+<p align="right">右对齐</p>
+
+```html
+<p align="left">左对齐</p>
+<p align="center">居中</p>
+<p align="right">右对齐</p>
+```
+
+---
+### 脚注
+
+John Wick's[^1] nickname is Baba Yaga[^yaga].
+
+[^1]: John Wick is a former hitman grieving the loss of his true love.
+[^yaga]: An enigmatic character from Slavic folklore who fries and eats children.
+
+![](./img/MD_Footnotes.png)
+💡：标识符可以是数字或单词，实际渲染会按顺序转换为编号，脚注本身一般也会自动置于文档末尾
+
+---
 ### 图片布局
 - **水平铺放**
   <p>
@@ -150,7 +167,28 @@ John Wick's[^1] nickname is Baba Yaga[^yaga].
   </p>
   ```
 
+---
+### 折叠
+被折叠的语段支持Markdown语法：
+
+<details>
+<summary>Useful Developer Tools</summary>
+
+- [Carbon](https://carbon.now.sh/)：生成代码片段截图或**嵌入代码**
+- [Picsum](https://picsum.photos/)：*获取随机图片的服务*
+- [Excalidraw](https://excalidraw.com/)：绘制手绘风格的图形🖼️
+ 
+</details>
+
+```html
+<details>
+<summary>Click to expand</summary>
+**Markdown** texts are hidden
+</details>
+```
+
+---
 ### 图表（Mermaid）
 
-
+---
 ### 数学公式
