@@ -83,7 +83,7 @@ Highlight these <mark>important words</mark>
 💡：某些渲染器可能不支持第1种语法，但通常都支持HTML
 
 #### 下划线
-姓名：<ins>John Wick</ins>
+姓名：<ins>John Wick</ins>  
 职业：<ins>Assassin</ins>
 ```html
 <ins>underline text</ins>
@@ -189,6 +189,7 @@ John Wick's[^1] nickname is Baba Yaga[^yaga].
 
 ---
 ### 图表（Mermaid）
+See [Diagramming With Mermaid](./Mermaid.md)
 
 ---
 ### 数学公式

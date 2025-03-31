@@ -29,3 +29,4 @@
 
 - **Toolkit** 🧰
   - [Markdown](./Toolkit/Markdown.md)
+  - [Mermaid](./Toolkit/Mermaid.md)
