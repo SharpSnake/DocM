@@ -21,17 +21,18 @@
 ## Flowchart（流程图）
 ### 常用符号
 
-| 形状                  | 描述                                                         | 代码                                                                                      |
-| --------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| ![][Flow_Terminal]    | 起止（Terminal）                                             | `A([Start or End])`                                                                       |
-| ![][Flow_Process]     | 程序、动作、操作（Process）                                  | `A[Process]`                                                                              |
-| ![][Flow_Decision]    | 决策判断（Decision）                                         | `A{Yes or No}`                                                                            |
-| ![][Flow_InOut]       | 输入/输出（Input/Output）                                    | `A[/Input or Output/]`                                                                    |
-| ![][Flow_ManualInput] | 手动输入（Manual Input）                                     | `A@{ shape: manual-input, label: "Enter Your ID"}`                                        |
-| ![][Flow_Subroutine]  | 已在其他地方定义的子程序（Subroutine or Predefined Process） | `A[[Subroutine]]`                                                                         |
-| ![][Flow_Doc]         | 文档（Document）                                             | `A@{ shape: doc, label: "Document" }`<br>`B@{ shape: docs, label: "Multiple documents" }` |
-| ![][Flow_Database]    | 数据库（Database）                                           | `A[(Database)]`                                                                           |
-| ![][Flow_Comment]     | 注释（Comment）                                              | `A[Function]`<br>`C@{ shape: comment, label: "Brief: \nParams:" }`<br>`A --> C`           |
+|            形状             | 描述                                                                                   | 代码                                                                                               |
+| :-------------------------: | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![](./img/Mermaid_Link.gif) | 链接/边：虚线表示注释或次要分支；流动线条表示实时或持续性的数据/流程状态，例如网络通信 | `A --> B`<br>   `A -.-> B`<br>`A ==> B`<br>`A e1@--> B`<br>`e1@{ animate: true, animation: fast }` |
+|     ![][Flow_Terminal]      | 起止（Terminal）                                                                       | `A([Start or End])`                                                                                |
+|      ![][Flow_Process]      | 程序、动作、操作（Process）                                                            | `A[Process]`                                                                                       |
+|     ![][Flow_Decision]      | 决策判断（Decision）                                                                   | `A{Yes or No}`                                                                                     |
+|       ![][Flow_InOut]       | 输入/输出（Input/Output）                                                              | `A[/Input or Output/]`                                                                             |
+|    ![][Flow_ManualInput]    | 手动输入（Manual Input）                                                               | `A@{ shape: manual-input, label: "Enter Your ID"}`                                                 |
+|    ![][Flow_Subroutine]     | 已在其他地方定义的子程序（Subroutine or Predefined Process）                           | `A[[Subroutine]]`                                                                                  |
+|        ![][Flow_Doc]        | 文档（Document）                                                                       | `A@{ shape: doc, label: "Document" }`<br>`B@{ shape: docs, label: "Multiple documents" }`          |
+|     ![][Flow_Database]      | 数据库（Database）                                                                     | `A[(Database)]`                                                                                    |
+|      ![][Flow_Comment]      | 注释（Comment）                                                                        | `A[Function]`<br>`C@{ shape: comment, label: "Brief: \nParams:" }`<br>`A --> C`                    |
 
 
 *参考文档：*
